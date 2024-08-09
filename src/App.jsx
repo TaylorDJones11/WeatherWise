@@ -1,7 +1,13 @@
+import Logo from './components/Logo';
+import SearchBar from './components/SearchBar';
+import WeatherDisplay from './components/WeatherDisplay';
+
 function App() {
   return (
     <>
-      <h1>WeatherWise</h1>
+      <Logo />
+      <SearchBar />
+      <WeatherDisplay />
     </>
   );
 }

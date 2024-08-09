@@ -8,4 +8,27 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-image: url('/public/mountainbg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+h1 {
+  color: #fffdfd;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  margin: 15px auto;
+  border-radius: 50px;
+  width: 45vw;
 }

@@ -1,4 +1,4 @@
-# WeatherWise
+# WeatherWise ⚡️🌤️
 
 ## Technologies Used
 - HTML

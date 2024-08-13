@@ -11,7 +11,7 @@
 This WeatherWise application allows users to search for weather information by city. The app uses Fetch API to make requests to the OpenWeatherMap API.
 
 ## Live Site
-[Link](https://your-deployed-site-url](https://beamish-rugelach-8d1af0.netlify.app/)
+( https://your-deployed-site-url](https://beamish-rugelach-8d1af0.netlify.app/ )
 
 ## Usage Instructions
 1. Clone the repository: `git clone https://github.com/your-username/weather-dashboard.git`

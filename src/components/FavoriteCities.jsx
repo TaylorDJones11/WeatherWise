@@ -50,20 +50,22 @@ function FavoriteCities() {
   }, []);
 
   return (
-    <div className='favorite-cities'>
+    <>
       <h2 className='favorite'>Cities Around the World</h2>
-      {weatherData.map((data, index) => (
-        <div key={index} className='city-weather'>
-          <h3>{data.city}</h3>
-          <div className='fav-temps'>
-            <p>
-              Temperature: {Math.round(data.weather.current.temp - 273.15)}°C
-            </p>
-            <p>Weather: {data.weather.current.weather[0].description}</p>
+      <div className='favorite-cities'>
+        {weatherData.map((data, index) => (
+          <div key={index} className='city-weather'>
+            <h3>{data.city}</h3>
+            <div className='fav-temps'>
+              <p>
+                Temperature: {Math.round(data.weather.current.temp - 273.15)}°C
+              </p>
+              <p>Weather: {data.weather.current.weather[0].description}</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 }
 

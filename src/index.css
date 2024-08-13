@@ -9,6 +9,8 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
   font-family: 'Montserrat', sans-serif;
   background-image: url('/public/ocean.jpg');
   background-repeat: no-repeat;
@@ -17,7 +19,6 @@ body {
   background-attachment: fixed;
   margin: 0;
   padding: 0;
-  height: 100vh;
 }
 
 h1 {
@@ -50,26 +51,51 @@ h1 {
 .weather-data {
   display: flex;
   justify-content: center;
-
+  align-items: center;
   background-color: rgb(202, 245, 248);
   width: 40vw;
   height: 150px;
   border-radius: 10px;
   text-align: center;
-  padding-top: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-data h2 {
+  margin-bottom: 10px;
+}
+
+.weather-data p {
+  margin: 5px 0;
 }
 
 /* Favorite City Component */
-.city-weather {
-  display: block;
-  margin-bottom: 20px;
+.favorite-cities {
+  display: flex;
+
+  justify-content: center;
+  gap: 20px;
 }
+
+.city-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+}
+
 .favorite {
   background-color: #021526;
   color: #fffdfd;
   text-align: center;
   border-radius: 50px;
   margin-top: 50px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .fav-temps {

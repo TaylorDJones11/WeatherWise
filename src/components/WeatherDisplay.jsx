@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 
-function WeatherDisplay() {
+function WeatherDisplay({ city }) {
   const [weatherData, setWeatherData] = useState(null);
+  const [error, setError] = useState(''); // State to manage errors
   const apiUrl = import.meta.env.VITE_WEATHER_API_URL;
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
@@ -17,10 +18,11 @@ function WeatherDisplay() {
       if (data.length > 0) {
         return data[0];
       } else {
-        throw new Error('No data found for the specified city.');
+        throw new Error('City not found.');
       }
     } catch (error) {
-      console.error('Error fetching coordinates:', error);
+      setError(error.message);
+      setWeatherData(null);
     }
   };
 
@@ -36,30 +38,44 @@ function WeatherDisplay() {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
         const data = await res.json();
-        console.log(data);
         setWeatherData(data);
+        setError('');
       }
     } catch (error) {
-      console.error('Error fetching weather data:', error);
+      setError(error.message);
+      setWeatherData(null);
     }
   };
 
   useEffect(() => {
-    getWeather('London');
-  }, []);
+    if (city) {
+      getWeather(city);
+    }
+  }, [city]);
 
   return (
     <div className='weather-data'>
+      {error && <p className='error-message'>{error}</p>}{' '}
+      {/* Display error message */}
       {weatherData ? (
         <div>
           <h2>Current Weather</h2>
-          <p>City: London</p>
-          <p>Temperature: {Math.round(weatherData.current.temp - 273.15)}°C</p>
-          <p>Weather: {weatherData.current.weather[0].description}</p>
-          <p>Time Zone: {weatherData.timezone}</p>
+          <p>
+            <b>City :</b> {city}
+          </p>
+          <p>
+            <b>Temperature :</b> {Math.round(weatherData.current.temp - 273.15)}
+            °C
+          </p>
+          <p>
+            <b>Weather :</b> {weatherData.current.weather[0].description}
+          </p>
+          <p>
+            <b>Time Zone :</b> {weatherData.timezone}
+          </p>
         </div>
       ) : (
-        <p>Loading weather data...</p>
+        !error && <p>Loading weather data...</p>
       )}
     </div>
   );

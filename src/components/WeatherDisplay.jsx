@@ -49,7 +49,7 @@ function WeatherDisplay() {
   }, []);
 
   return (
-    <div>
+    <div className='weather-data'>
       {weatherData ? (
         <div>
           <h2>Current Weather</h2>

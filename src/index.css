@@ -7,6 +7,8 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
   font-family: 'Montserrat', sans-serif;
   background-image: url('/public/ocean.jpg');
   background-repeat: no-repeat;
@@ -42,4 +44,17 @@ h1 {
   width: 25vw;
   margin: 15px auto;
   height: 30px;
+  padding-left: 10px;
+}
+
+.weather-data {
+  display: flex;
+  justify-content: center;
+
+  background-color: rgb(202, 245, 248);
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 15px;
 }

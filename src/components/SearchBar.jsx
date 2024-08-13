@@ -1,4 +1,4 @@
 function SearchBar() {
-  return <div>SearchBar</div>;
+  return <input className='search' placeholder='Enter city'></input>;
 }
 export default SearchBar;

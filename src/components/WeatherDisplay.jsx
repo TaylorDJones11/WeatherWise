@@ -67,6 +67,7 @@ function WeatherDisplay({ city }) {
             <b>Temperature :</b> {Math.round(weatherData.current.temp - 273.15)}
             °C
           </p>
+
           <p>
             <b>Weather :</b> {weatherData.current.weather[0].description}
           </p>

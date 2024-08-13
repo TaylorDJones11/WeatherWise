@@ -52,9 +52,31 @@ h1 {
   justify-content: center;
 
   background-color: rgb(202, 245, 248);
-  width: 300px;
+  width: 40vw;
   height: 150px;
   border-radius: 10px;
   text-align: center;
   padding-top: 15px;
+}
+
+/* Favorite City Component */
+.city-weather {
+  display: block;
+  margin-bottom: 20px;
+}
+.favorite {
+  background-color: #021526;
+  color: #fffdfd;
+  text-align: center;
+  border-radius: 50px;
+  margin-top: 50px;
+}
+
+.fav-temps {
+  display: block;
+}
+
+.favorite-cities h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }

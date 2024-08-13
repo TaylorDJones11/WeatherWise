@@ -5,7 +5,6 @@
 - CSS
 - JavaScript
 - React
-- Redux Toolkit
 - Vite (for development and build)
 
 ## Approach Taken
@@ -20,7 +19,6 @@ This WeatherWise application allows users to search for weather information by c
 3. Start the development server: `npm run dev`
 
 ## Unsolved Problems
-- Consider implementing error handling for invalid city names.
 - Explore adding user authentication for personalized weather tracking.
 
 ## Future Improvements

@@ -8,15 +8,30 @@ function FavoriteCities() {
     'Lisbon, Portugal',
     'New York, USA',
     'Tokyo, Japan',
+    'San Diego, California',
+    'Bangkok, Thailand',
+    'Chicago, Illinois',
+    'Dubai, UAE',
+    'Istanbul, Turkey',
+    'Paris, France',
+    'Sydney',
+    'Berlin',
+    'Cape Town',
   ];
 
   const apiUrl = import.meta.env.VITE_WEATHER_API_URL;
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
-  const fetchWeatherForCities = async () => {
+  // Randomize the cities
+  const getRandomCities = () => {
+    const shuffled = cities.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 5);
+  };
+
+  const fetchWeatherForCities = async (selectedCities) => {
     try {
       const allWeatherData = await Promise.all(
-        cities.map(async (city) => {
+        selectedCities.map(async (city) => {
           const res = await fetch(
             `${apiUrl}/geo/1.0/direct?q=${city}&appid=${apiKey}`
           );
@@ -45,8 +60,15 @@ function FavoriteCities() {
     }
   };
 
+  const updateWeatherData = () => {
+    const selectedCities = getRandomCities();
+    fetchWeatherForCities(selectedCities);
+  };
+
   useEffect(() => {
-    fetchWeatherForCities();
+    updateWeatherData();
+    const intervalId = setInterval(updateWeatherData, 10000); // Update every 10 seconds
+    return () => clearInterval(intervalId); // Cleanup on unmount
   }, []);
 
   return (

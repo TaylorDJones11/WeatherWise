@@ -1,5 +1,7 @@
 #  ☀️💨 WeatherWise ⚡️🌤️
 
+![WeatherWise](https://github.com/user-attachments/assets/78cff7e0-8671-42c4-9bdd-21171f5000d7)
+
 ## Technologies Used
 - HTML
 - CSS

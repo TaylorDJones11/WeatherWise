@@ -37,3 +37,4 @@ This WeatherWise application allows users to search for weather information by c
 ## Future Improvements
 - Implement dark mode.
 - Add more weather metrics and forecasts.
+- Users able to add favorite cities to the "Cities Around the World" component

@@ -8,7 +8,7 @@
 - Vite (for development and build)
 
 ## Approach Taken
-This WeatherWise application allows users to search for weather information by city. The app uses Fetch API to make requests to the OpenWeatherMap API.
+This WeatherWise application allows users to search for weather information by city. The app uses Fetch API to make requests to the OpenWeatherMap API. Users can search for the current weather of any city. The bottom displays cities worldwide and changes every 10 seconds to display new cities. 
 
 
 ## Live Site
